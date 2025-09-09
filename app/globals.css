@@ -1,0 +1,44 @@
+@import '../styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PhotoFlow brand-specific global styles */
+/* Legacy tokens are now imported from tokens.css for compatibility */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-brand);
+    line-height: var(--leading-normal);
+  }
+  
+  /* Typography improvements */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: var(--leading-tight);
+    font-weight: var(--font-semibold);
+    color: hsl(var(--text-primary));
+  }
+  
+  p {
+    color: hsl(var(--text-secondary));
+    line-height: var(--leading-normal);
+  }
+  
+  /* Smooth scrolling and photo-safe interactions */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Improved focus states for accessibility */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+}
