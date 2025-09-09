@@ -45,12 +45,59 @@ logs
 # Claude Code specific
 .claude/
 
-# TODO files (can be committed selectively)
-# *-TODO.md
+# Documentation and planning files (exclude from repository)
+Docs/
+frontend-brief/
+ux-research/
+*-TODO.md
+PHOTOFLOW-BRAND-GUIDELINES.md
 
 # Build artifacts and cache
 .next/
 *.tsbuildinfo
+.swc/
 
-# MacOS
+# MacOS and system files
 .DS_Store
+Thumbs.db
+
+# Development and testing artifacts
+coverage/
+.nyc_output/
+junit.xml
+test-results/
+playwright-report/
+test-results.xml
+
+# Environment and configuration
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor and IDE files
+*.sublime-workspace
+*.sublime-project
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.iml
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+*.pid
+*.seed
+*.pid.lock
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+
+# Docker development files (keep main docker-compose.yml)
+docker-compose.override.yml
+docker-compose.local.yml
+Dockerfile.dev
